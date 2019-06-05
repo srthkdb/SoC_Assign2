@@ -4,9 +4,6 @@
   margin: auto;
 }
 
-.image{
-  display: none;
-}
 
 .prev, .next {
   cursor: pointer;

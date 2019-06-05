@@ -1,16 +1,18 @@
-var slideIndex = 1;
-showSlide(slideIndex);
+var src_list = ['../static/1.jpg', '../static/2.jpg', '../static/3.jpg']
+var index = 0;
 
-function plusSlide(n){
-  return showSlide(slideIndex += n);
+
+function next(){
+  showImg(index + 1);
 }
 
-function showSlide(n){
-  var slides = document.getElementsByClassName("image");
-  if(n > slides.length) slideIndex = 1;
-  if(n < 1) slideIndex = slides.length;
-  for(var i = 0; i < slides.length; i++){
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
+function prev(){
+  showImg(index - 1);
+}
+
+function showImg(n){
+  if(n > 2) n = 0;
+  if(n < 0) n = 2;
+  document.getElementById('img').src = src_list[n];
+  index = n;
 }

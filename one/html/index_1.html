@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
+    <meta charset="utf-8">
     <title>Carousel</title>
     <link rel="stylesheet" href="../css/index_1.css">
-    <script type="text/javascript" src="../js/index_1.js"></script>
+    <script src="../js/index_1.js"></script>
   </head>
   <body>
     <div class="image-slider">
       <div class="image">
-        <img src="../static/1.jpg" alt="image1">
+        <img id="img" src="../static/1.jpg" height="600px" width="100%" alt="image">
       </div>
-      <div class="image">
-        <img src="../static/2.jpg" alt="image1">
-      </div>
-      <div class="image">
-        <img src="../static/3.jpg" alt="image1">
-      </div>
+      <button class="prev " id="prev" onclick="next()">
+      <button class="next"  id="next" onclick="prev()">
     </div>
-    <a onclick="plusSlide(-1)" class="prev"></a>
-    <a  onclick="plusSlide(1)"class="next"></a>
   </body>
 </html>
